@@ -1,6 +1,5 @@
 <h1>Curso Alura - API REST com .NET</h1>
 
-<p>Aplicativo para buscar e compartilhar gifs.</p>
 <ul>
   <li>Entenda o que é uma API</li>
   <li>Aprenda a receber requisições em sua API</li>
