@@ -12,7 +12,7 @@ namespace FilmesAPI.Controllers
         private static int id = 1;
 
         [HttpPost]
-        public void AdicionaFilme([FromBody]Filme filme)
+        public void Criar([FromBody]Filme filme)
         {
             filme.Id = id;
             id++;
@@ -20,9 +20,17 @@ namespace FilmesAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Filme> RecuperarFilmes()
+        public IEnumerable<Filme> Listar()
         {
             return filmes;
+        }
+
+        [HttpGet("{id:int}")]
+        public Filme BuscarPorId(int id)
+        {
+            var filme = filmes.FirstOrDefault(f => f.Id == id);
+
+            return filme;
         }
     }
 }
